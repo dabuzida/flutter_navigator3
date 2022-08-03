@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const dd());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -19,15 +19,15 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Navigator',
+      title: 'Navigator3',
       home: Navigator(
         pages: [
           MaterialPage(
             key: ValueKey('ItemListScreen'),
             child: ItemsListScreen(
-              onItemTapped: _handleItemTapped,
-              onRouteTapped: _handleRouteTapped,
-            ),
+                // onItemTapped: _handleItemTapped,
+                // onRouteTapped: _handleRouteTapped,
+                ),
           ),
         ],
         onPopPage: (route, result) => route.didPop(result),
